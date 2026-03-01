@@ -16,7 +16,7 @@ export async function fetchAtencionesCentro() {
     const token = getToken();
 
     const res = await fetch(
-        "http://localhost:9091/api/resumen2025/anual",
+        "https://resumen-2025-sihce.onrender.com/api/resumen2025/anual",
         {
             headers: {
                 "Authorization": `Bearer ${token}`
