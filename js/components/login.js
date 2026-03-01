@@ -1,4 +1,3 @@
-// js/components/login.js
 export function Login() {
 
     const container = document.createElement("div");
