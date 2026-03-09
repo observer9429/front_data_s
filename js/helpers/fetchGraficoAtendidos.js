@@ -21,8 +21,12 @@ import { getToken } from "./auth.js";
 export async function fetchGraficoAtendidos(semestre) {
     const token = getToken();
 
+    //const url = `http://localhost:9091/api/grafico/semestre/${semestre}`;
+
+    const url = `https://resumen-2025-sihce.onrender.com/api/grafico/semestre/${semestre}`;
+
     const res = await fetch(
-        `https://resumen-2025-sihce.onrender.com/api/grafico/semestre/${semestre}`,
+        url,
         {
             headers: {
                 "Authorization": `Bearer ${token}`

@@ -14,3 +14,20 @@ export function clearToken() {
 export function isAuthenticated() {
     return !!getToken();
 }
+
+export function getRoles() {
+    return JSON.parse(localStorage.getItem("roles") || "[]");
+}
+
+export function setRoles(roles) {
+    localStorage.setItem("roles", JSON.stringify(roles));
+}
+
+export function clearAuth() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("roles");
+}
+
+export function getUsername() {
+    return localStorage.getItem("username");
+}

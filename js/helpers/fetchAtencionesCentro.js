@@ -15,8 +15,11 @@ import { getToken } from "./auth.js";
 export async function fetchAtencionesCentro() {
     const token = getToken();
 
+    const url = "https://resumen-2025-sihce.onrender.com/api/resumen2025/anual";
+    //const url = "http://localhost:9091/api/resumen2025/anual";
+
     const res = await fetch(
-        "https://resumen-2025-sihce.onrender.com/api/resumen2025/anual",
+        url,
         {
             headers: {
                 "Authorization": `Bearer ${token}`
