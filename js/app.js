@@ -364,8 +364,11 @@ document.addEventListener("click", async (e) => {
 
                 async (data) => {
 
+                    //const urlf = `http://localhost:9091/users/${id}`;
+                      const urlf = `https://resumen-2025-sihce.onrender.com/users/${id}`;
+
                     await fetchWithAuth(
-                        `http://localhost:9091/users/${id}`,
+                        urlf,
                         {
                             method: "PUT",
                             body: JSON.stringify(data)
@@ -406,8 +409,11 @@ document.addEventListener("click", async (e) => {
 
         if (!confirm("¿Eliminar usuario?")) return;
 
+        //const urlf1 = `http://localhost:9091/users/${id}`;
+         const urlf1 = `https://resumen-2025-sihce.onrender.com/users/${id}`;
+
         await fetchWithAuth(
-            `http://localhost:9091/users/${id}`,
+            urlf1,
             { method: "DELETE" }
         );
 
@@ -465,8 +471,10 @@ document.addEventListener("click", async (e) => {
         const params = new URLSearchParams();
         params.append(tipo, valor);
 
+        //const urlf2 = `http://localhost:9091/users/${id}`;
+        const urlf2 = `https://resumen-2025-sihce.onrender.com/users/${id}`;
         const data = await fetchWithAuth(
-            `http://localhost:9091/users/search?${params.toString()}`
+            urlf2
         );
 
         currentUsers = data;
