@@ -162,7 +162,8 @@ export function TablaDuplicaciones(data) {
 
         const mes = document.getElementById("mesDuplicados").value;
 
-        const url = `http://localhost:9091/duplications/excel/${mes}`;
+        //const url = `http://localhost:9091/duplications/excel/${mes}`;
+        const url = `https://resumen-2025-sihce.onrender.com/duplications/excel/${mes}`;
 
         const link = document.createElement("a");
 
