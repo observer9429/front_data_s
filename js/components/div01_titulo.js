@@ -25,7 +25,7 @@ export function Titulo(onLogout) {
             margin:0;
             font-size:26px;
         ">
-            DIRIS LIMA ESTE
+            Sistema de Citas Médicas (SIHCE) - Simulación con Spring Boot
         </h1>
 
         <div id="userBox" style="
